@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ebubekir Gönan – Technical Project Manager</title>
+<meta name="description" content="Technical Project Manager delivering municipal management systems and web-based ERP applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --bg: #111111;
+  --fg: #EDEDED;
+  --muted: #A3A3A3;
+  --rule: #2E2E2E;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 72px 32px;
+  background:
+    linear-gradient(rgba(17,17,17,.82), rgba(17,17,17,.88)),
+    url('Province_of_the_south_of_france_by_orbitelambda.jpg') center / cover fixed no-repeat,
+    var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+main { max-width: 760px; margin: 0 auto; }
+a { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { text-decoration: none; }
+h1 { font-size: 34px; font-weight: 600; letter-spacing: -.01em; margin: 0 0 4px; }
+.role, .meta, .muted { color: var(--muted); }
+.meta { font-size: 14px; margin: 12px 0 28px; display: flex; gap: 20px; flex-wrap: wrap; }
+.summary { margin: 0 0 36px; }
+.label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 8px;
+  margin: 0;
+  font-weight: 400;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.row .when { flex: 0 0 150px; color: var(--muted); font-size: 14px; }
+.row .what { flex: 1 1 380px; }
+.row strong { font-weight: 600; }
+.section { margin-bottom: 32px; }
+.skills { padding: 18px 0; color: var(--muted); }
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  transform: translate(-50%, 12px);
+  background: var(--fg);
+  color: var(--bg);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s, transform .2s;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.modal.show { display: flex; }
+.modal-box {
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 360px;
+  width: 100%;
+}
+.modal-box p { margin: 0 0 20px; }
+.modal-actions { display: flex; gap: 12px; justify-content: flex-end; }
+.modal-actions button {
+  font: inherit;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+}
+.modal-actions button.primary { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  display: none;
+  flex-direction: column;
+  padding: 24px;
+  gap: 12px;
+}
+.viewer.show { display: flex; }
+.viewer-bar { display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
+.viewer-bar button {
+  font: inherit;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+  background: var(--bg);
+  color: var(--fg);
+  cursor: pointer;
+}
+.viewer iframe { flex: 1; width: 100%; max-width: 960px; margin: 0 auto; border: 1px solid var(--rule); border-radius: 8px; background: #fff; }
+.viewer-bar { width: 100%; max-width: 960px; margin: 0 auto; }
+.viewer img {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  object-fit: contain;
+  display: none;
+}
+.viewer.is-image img { display: block; }
+.viewer.is-image iframe { display: none; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Ebubekir Gönan</h1>
+    <div class="role">Technical Project Manager at <a href="https://www.linkedin.com/company/vadi-kurumsal-bilgi-sistemleri/home/" class="ext-link" data-name="Vadi Kurumsal Bilgi Sistemleri">Vadi Kurumsal Bilgi Sistemleri</a></div>
+    <div class="meta">
+      <span>İstanbul</span>
+      <a href="mailto:ebubekir.gonan1917@gmail.com" id="copy-email">Email</a>
+      <a href="https://github.com/EbubekirGonan" class="ext-link" data-name="GitHub">GitHub</a>
+      <a href="https://www.linkedin.com/in/ebubekirgonan/" class="ext-link" data-name="LinkedIn">LinkedIn</a>
+    </div>
+    <p class="summary">Background in full-stack development and psychology. I deliver municipal management systems and web-based ERP applications, connecting business requirements with software teams.</p>
+  </header>
+
+  <section class="section" aria-labelledby="experience">
+    <h2 class="label" id="experience">Experience</h2>
+    <div class="row">
+      <div class="when">May 2025 – Present</div>
+      <div class="what">
+        <strong>Technical Project Manager</strong>, <a href="https://www.linkedin.com/company/vadi-kurumsal-bilgi-sistemleri/home/" class="ext-link" data-name="Vadi Kurumsal Bilgi Sistemleri">Vadi Kurumsal Bilgi Sistemleri</a>
+        <div class="muted">Requirements analysis, system design and delivery across more than four municipalities. Go-live coordination and training for 20+ operators and end users.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">2024 – 2025</div>
+      <div class="what">
+        <strong>Freelance Software Developer</strong>
+        <div class="muted">Maintained and improved enterprise-level applications.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="projects">
+    <h2 class="label" id="projects">Projects</h2>
+    <div class="row">
+      <div class="when">2026</div>
+      <div class="what">
+        <a href="https://todap.org" class="ext-link" data-name="TODAP Website">TODAP Website</a>
+        <div class="muted">Production site for a psychologists’ association. Node.js, PostgreSQL, Render.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">2024</div>
+      <div class="what">
+        <a href="https://github.com/EbubekirGonan/FullStack-Bootcamp-Final-Case" class="ext-link" data-name="E-Commerce Platform">E-Commerce Platform</a>
+        <div class="muted">Layered API and React UI. Node.js, Kafka, Redis, Elasticsearch.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">2024</div>
+      <div class="what">
+        <a href="https://github.com/EbubekirGonan/Vet-App" class="ext-link" data-name="Vet Management System">Vet Management System</a>
+        <div class="muted">Full-stack app. Spring Boot, PostgreSQL, React.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="education">
+    <h2 class="label" id="education">Education</h2>
+    <div class="row">
+      <div class="when">Dec 2024</div>
+      <div class="what">
+        <a href="newmindai.pdf" class="pdf-link" data-name="NewMind AI Fullstack Bootcamp"><strong>NewMind AI Fullstack Bootcamp</strong></a>
+        <div class="muted">Graduated. Built an e-commerce website with frontend and backend.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">Dec 2023</div>
+      <div class="what">
+        <a href="patika.pdf" class="pdf-link" data-name="Patika+ Fullstack Web Development Bootcamp"><strong>Patika+ 6-month Fullstack Web Development Bootcamp</strong></a>
+        <div class="muted">Graduated from one of Turkey’s most selective bootcamps. Built a Vet Management app, backend and frontend.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">Sep 2023</div>
+      <div class="what">
+        <a href="1716987250848.jpeg" class="pdf-link" data-name="Mustafa Akgül Summer Camp"><strong>Free Software Association Mustafa Akgül Summer Camp</strong></a>
+        <div class="muted">Web Application Development with PHP.</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">Sep 2023 – Jun 2027</div>
+      <div class="what">
+        <strong>Computer Programming</strong>, Anadolu University
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">2016 – 2022</div>
+      <div class="what">
+        <strong>Psychology, Bachelor’s Degree</strong>, Istanbul University
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="skills">
+    <h2 class="label" id="skills">Skills</h2>
+    <div class="skills">Requirements Analysis · Development Planning · Issue Tracking · User Acceptance Testing · Go-live Coordination · Node.js · PostgreSQL · React · Spring Boot · Docker</div>
+  </section>
+</main>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-text">
+  <div class="modal-box">
+    <p id="modal-text">Open in a new tab?</p>
+    <div class="modal-actions">
+      <button type="button" id="modal-cancel">Cancel</button>
+      <button type="button" class="primary" id="modal-ok">Open</button>
+    </div>
+  </div>
+</div>
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title">
+  <div class="viewer-bar">
+    <span id="viewer-title"></span>
+    <button type="button" id="viewer-close">Close</button>
+  </div>
+  <iframe id="viewer-frame" title="Document"></iframe>
+  <img id="viewer-img" alt="">
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite">Email copied</div>
+<script>
+const emailLink = document.getElementById('copy-email');
+const toast = document.getElementById('toast');
+let toastTimer;
+function showToast(msg) {
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
+}
+emailLink.addEventListener('click', async (e) => {
+  e.preventDefault();
+  const email = emailLink.getAttribute('href').replace('mailto:', '');
+  try {
+    await navigator.clipboard.writeText(email);
+  } catch {
+    const t = document.createElement('textarea');
+    t.value = email;
+    document.body.appendChild(t);
+    t.select();
+    document.execCommand('copy');
+    t.remove();
+  }
+  showToast('Email copied');
+});
+const modal = document.getElementById('modal');
+const modalOk = document.getElementById('modal-ok');
+const modalCancel = document.getElementById('modal-cancel');
+const modalText = document.getElementById('modal-text');
+let activeLink = null;
+function closeModal() {
+  modal.classList.remove('show');
+  if (activeLink) activeLink.focus();
+}
+document.querySelectorAll('.ext-link').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    activeLink = link;
+    modalText.textContent = 'Open ' + link.dataset.name + ' in a new tab?';
+    modal.classList.add('show');
+    modalOk.focus();
+  });
+});
+modalOk.addEventListener('click', () => {
+  window.open(activeLink.href, '_blank', 'noopener,noreferrer');
+  closeModal();
+});
+modalCancel.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+const viewer = document.getElementById('viewer');
+const viewerFrame = document.getElementById('viewer-frame');
+const viewerImg = document.getElementById('viewer-img');
+let pdfTrigger = null;
+function closeViewer() {
+  viewer.classList.remove('show');
+  viewerFrame.src = 'about:blank';
+  viewerImg.removeAttribute('src');
+  if (pdfTrigger) pdfTrigger.focus();
+}
+document.querySelectorAll('.pdf-link').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    pdfTrigger = link;
+    document.getElementById('viewer-title').textContent = link.dataset.name;
+    const href = link.getAttribute('href');
+    const isImage = /\.(jpe?g|png|gif|webp)$/i.test(href);
+    viewer.classList.toggle('is-image', isImage);
+    viewerImg.alt = link.dataset.name;
+    if (isImage) viewerImg.src = href;
+    else viewerFrame.src = href + '#view=FitH';
+    viewer.classList.add('show');
+  });
+});
+document.getElementById('viewer-close').addEventListener('click', closeViewer);
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  if (viewer.classList.contains('show')) closeViewer();
+  else if (modal.classList.contains('show')) closeModal();
+});
+</script>
+</body>
+</html>
