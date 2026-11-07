@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ebubekir Gönan – Technical Project Manager</title>
 <meta name="description" content="Technical Project Manager delivering municipal management systems and web-based ERP applications.">
+<link rel="preload" href="background.webp" as="image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -21,12 +22,28 @@ body {
   padding: 72px 32px;
   background:
     linear-gradient(rgba(17,17,17,.82), rgba(17,17,17,.88)),
-    url('Province_of_the_south_of_france_by_orbitelambda.jpg') center / cover fixed no-repeat,
+    url('background.webp') center / cover fixed no-repeat,
     var(--bg);
   color: var(--fg);
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.6;
+}
+@media (max-width: 768px) {
+  body {
+    position: relative;
+    isolation: isolate;
+    background: var(--bg);
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(rgba(17,17,17,.82), rgba(17,17,17,.88)),
+      url('background.webp') center / cover no-repeat;
+  }
 }
 main { max-width: 760px; margin: 0 auto; }
 a { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
